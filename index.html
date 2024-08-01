@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagdamba Traders - Premium Dry Fruits & Kirana</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="logo.png" alt="Jagdamba Traders Logo"> -->
+                <span>Jagdamba Traders</span>
+            </div>
+            <ul>
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#featured-products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-content">
+                <h1>Premium Dry Fruits & Kirana</h1>
+                <p>WholeSale Kirana Merchant</p>
+                <button id="cta-button">"</button>
+            </div>
+        </section>
+
+        <section id="featured-products">
+            <h2>Our Premium Selection</h2>
+            <div class="product-grid">
+                <div class="product" data-product="cashew">
+                    <img src="kaju.jpg" alt="Cashews">
+                    <h3>Cashews</h3>
+                </div>
+                <div class="product" data-product="raisin">
+                    <img src="kishmis.jpg" alt="Raisins">
+                    <h3>Raisins</h3>
+                </div>
+                <div class="product" data-product="walnut">
+                    <img src="walnut.jpg" alt="Walnuts">
+                    <h3>Walnuts</h3>
+                </div>
+                <div class="product" data-product="almond">
+                    <img src="badam.jpg" alt="Almonds">
+                    <h3>Almonds</h3>
+                </div>
+                <div class="product" data-product="pista">
+                    <img src="pista.jpg" alt="Pistachios">
+                    <h3>Pistachios</h3>
+                </div>
+                <div class="product" data-product="makhana">
+                    <img src="makhana.jpg" alt="Makhana">
+                    <h3>Makhana</h3>
+                </div>
+                <div class="product" data-product="sunflower">
+                    <img src="seeds.jpg" alt="Sunflower Seeds">
+                    <h3>Sunflower Seeds</h3>
+                </div>
+                <div class="product" data-product="fig">
+                    <img src="figs.jpg" alt="Figs">
+                    <h3>Figs</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Welcome to Jagdamba Traders, where quality meets tradition. Established with the mission of bringing premium dry fruits and kirana products to your doorstep, we take pride in our wide range of carefully selected products. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
+                    <p>At Jagdamba Traders, we believe in the power of quality ingredients. Our team works tirelessly to ensure that each product meets the highest standards. Whether you're looking for cashews, almonds, or any other dry fruits, you can trust that our offerings are fresh, flavorful, and of the highest quality.</p>
+                    <p>Thank you for choosing us. We look forward to serving you with the best of what we have to offer!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info-container">
+                    <p class="contact-info">For custom orders, please call:</p>
+                    <p class="contact-info">
+                        <a href="tel:9849656791">Gajanand Tiwari at 9849656791</a><br>
+                        <a href="tel:7337287510">Ramanuj Tiwari at 7337287510</a>
+                    </p>
+                </div>
+                <div class="form-container">
+                    <form id="contact-form">
+                        <label for="item">Select Item:</label>
+                        <div class="custom-select">
+                            <select id="item" name="item" required>
+                                <option value="" disabled selected>Select an item</option>
+                                <option value="Cashews">Cashews</option>
+                                <option value="Raisins">Raisins</option>
+                                <option value="Walnuts">Walnuts</option>
+                                <option value="Almonds">Almonds</option>
+                                <option value="Pistachios">Pistachios</option>
+                                <option value="Makhana">Makhana</option>
+                                <option value="Sunflower Seeds">Sunflower Seeds</option>
+                                <option value="Figs">Figs</option>
+                            </select>
+                        </div>
+        
+                        <label for="quantity">Quantity (in KG):</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required>
+        
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        
+                        <button type="submit">Send Order</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries or support.</p>
+        </section> -->
+    </main>
+
+    <footer>
+        <!-- <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div> -->
+        <div class="quick-links">
+            <a href="#hero">Home</a>
+            <a href="#featured-products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <form class="newsletter">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+        <p>&copy; 2024 Jagdamba Traders. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
